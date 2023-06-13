@@ -6,7 +6,7 @@ Dim strURL, strSavePath
 strURL = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
 
 ' Save path for the downloaded image
-strSavePath = "C:\Users\680242\wallpaper\1.jpg"
+strSavePath = "C:\Users\XXXX\wallpaper\1.jpg"
 
 Dim objHTTP, objStream, objFSO, objFile
 Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
