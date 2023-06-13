@@ -9,7 +9,7 @@ Set oShell = CreateObject("WScript.Shell")
 Set oFSO = CreateObject("Scripting.FileSystemObject")
 
 sWinDir = oFSO.GetSpecialFolder(0)
-sWallPaper = "C:\Users\680242\wallpaper\1.jpg"
+sWallPaper = "C:\Users\XXXXX\wallpaper\1.jpg"
 
 ' update in registry
 oShell.RegWrite "HKCU\Control Panel\Desktop\Wallpaper", sWallPaper
