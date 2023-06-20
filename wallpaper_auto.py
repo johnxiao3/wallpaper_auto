@@ -14,7 +14,7 @@ def set_wallpaper(image_path):
 
 def download_random_wallpaper(file_path):
     # Specify the number of images to select from (e.g., 10)
-    num_images = 100
+    num_images = 10
     rand_index = random.randint(0, num_images-1)
     
     print('rand_index',rand_index)
