@@ -13,6 +13,7 @@ def set_wallpaper(image_path):
     ctypes.windll.user32.SystemParametersInfoW(20, 0, image_path, 3)
 
 def download_random_wallpaper(file_path):
+    try_connect = 100
     # Specify the number of images to select from (e.g., 10)
     num_images = 10
     rand_index = random.randint(0, num_images-1)
@@ -21,16 +22,33 @@ def download_random_wallpaper(file_path):
 
     # Fetching the Bing's daily image JSON
     url = f'https://www.bing.com/HPImageArchive.aspx?format=js&idx={rand_index}&n=1&mkt=en-US'
-    response = requests.get(url)
-    data = response.json()
-
+    i=0
+    success = 0
+    while (i<try_connect and success == 0):
+        try:
+            response = requests.get(url)
+            data = response.json()
+            success = 1
+        except:
+            i+=1
+            print("err")
     # Extracting the image URL
     image_url = data['images'][0]['url']
     full_image_url = 'https://www.bing.com' + image_url
     #print(full_image_url)
     title = data['images'][0]['title']
     # Downloading the image
-    response = requests.get(full_image_url)
+    
+    i=0
+    success = 0
+    while (i<try_connect and success == 0):
+        try:
+            response = requests.get(full_image_url)
+            success = 1
+        except:
+            i+=1
+            print("err 2")
+
     image_data = response.content
 
     # Creating the "wallpaper" directory if it doesn't exist
