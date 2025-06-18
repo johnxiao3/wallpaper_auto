@@ -100,9 +100,4 @@ Add this line to run your script every 2 minutes:
 
 Feel free to reach out if you need help automating this setup or debugging cron jobs!
 
-```
 
----
-
-Just select all the text above and paste it into your README.md file! Need help with anything else?
-```
