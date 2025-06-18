@@ -108,6 +108,7 @@ Since cron runs as a background process without GUI interaction, it likely doesn
 
 Move the file just under the [user] will solve the problem.
 
+```
 * * * * * command_to_run
 | | | | |
 | | | | +----- Day of the week (0 - 7) (Sunday = 0 or 7)
@@ -115,5 +116,5 @@ Move the file just under the [user] will solve the problem.
 | | +--------- Day of the month (1 - 31)
 | +----------- Hour (0 - 23)
 +------------- Minute (0 - 59)
-
+```
 
