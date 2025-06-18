@@ -101,3 +101,10 @@ Add this line to run your script every 2 minutes:
 Feel free to reach out if you need help automating this setup or debugging cron jobs!
 
 
+
+macOS Catalina and later introduced System Integrity Protection (SIP) and stricter privacy permissions. Access to certain folders like Documents, Desktop, Downloads requires explicit permission for apps or services.
+
+Since cron runs as a background process without GUI interaction, it likely doesn't have permission to access your Documents folder.
+
+Move the file just under the [user] will solve the problem.
+
