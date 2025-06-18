@@ -1,6 +1,3 @@
-Absolutely! Here’s the entire README content in one clean block so you can copy it all at once:
-
-````markdown
 # Scheduling a Python Script Every 2 Minutes on macOS
 
 This guide explains how to schedule a Python script to run every 2 minutes on a Mac using `cron`, with the Python script made executable.
